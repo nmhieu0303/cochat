@@ -24,7 +24,7 @@ const Login = () => {
     return (
         <div className="login-page">
             <Row justify='center' style={{ height: '100vh',alignItems: 'center' }}>
-                <Col xs={{ span: 24 }} lg={{ span: 6 }} style={{ textAlign: 'center' }}>
+                <Col xs={{ span: 20 }} lg={{ span: 6 }} style={{ textAlign: 'center' }}>
                     <Title level={1} style={{ textAlign: 'center' }}>
                         Welcome to CoChat
                     </Title>

@@ -12,13 +12,14 @@ export default function AppProvider(props) {
 
     const { user } = useContext(AuthContext)
 
-    const condition = useMemo(() => ({
+    const roomListCondition = useMemo(() => ({
         fieldName: 'members',
         operator: 'array-contains',
         value: user.uid
     }), [user.uid])
 
-    const roomList = useFireStore('rooms', condition)
+    const roomList = useFireStore('rooms', roomListCondition)
+    console.log(`roomList`, roomList)
     const selectedRoom = useMemo(() => {
         return roomList?.find(room => room.id === selectedRoomId)
     }, [roomList, selectedRoomId]
